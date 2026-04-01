@@ -1,0 +1,52 @@
+# Shell completions for development tools
+# These are typically installed automatically when tools are installed via Homebrew
+# This list documents what should be available
+
+# Container and Orchestration
+docker              # Docker command completion
+kubectl             # Kubernetes CLI completion
+helm                # Helm package manager completion
+kind                # Kubernetes in Docker completion
+
+# Cloud Providers
+aws                 # AWS CLI completion
+gcloud              # Google Cloud CLI completion
+az                  # Azure CLI completion
+
+# Infrastructure as Code
+terraform           # Terraform completion
+ansible             # Ansible completion
+vagrant             # Vagrant completion
+
+# Version Control and Git
+git                 # Git command completion (built-in)
+gh                  # GitHub CLI completion
+gitlab              # GitLab CLI completion
+
+# Package Managers and Build Tools
+brew                # Homebrew completion
+npm                 # npm completion
+yarn                # Yarn completion
+pnpm                # pnpm completion
+pip                 # Python pip completion
+cargo               # Rust cargo completion
+go                  # Go toolchain completion
+
+# Development Tools
+tmux                # tmux completion
+vim                 # vim completion
+nvim                # neovim completion
+fzf                 # fuzzy finder completion (installed via Homebrew)
+
+# Database Tools
+psql                # PostgreSQL client completion
+mysql               # MySQL client completion
+redis-cli           # Redis client completion
+
+# Monitoring and Observability
+curl                # curl completion
+httpie              # HTTPie completion
+
+# Note: Most of these are automatically installed when the corresponding
+# tools are installed via Homebrew. The zsh configuration in the dotfiles
+# will automatically load completions from Homebrew's completion directory.

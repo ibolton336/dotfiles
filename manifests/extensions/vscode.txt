@@ -1,0 +1,69 @@
+# Visual Studio Code Extensions
+# Install with: code --install-extension EXTENSION_ID
+
+# Language Support
+ms-python.python                           # Python language support
+ms-vscode.vscode-typescript-next           # TypeScript and JavaScript support
+bradlc.vscode-tailwindcss                  # Tailwind CSS IntelliSense
+rust-lang.rust-analyzer                    # Rust language support
+golang.go                                  # Go language support
+ms-vscode.cpptools                         # C/C++ language support
+
+# Frameworks and Libraries
+ms-vscode.vscode-json                      # JSON language support
+redhat.vscode-yaml                         # YAML language support
+ms-kubernetes-tools.vscode-kubernetes-tools # Kubernetes support
+ms-vscode.vscode-docker                    # Docker support
+hashicorp.terraform                        # Terraform language support
+
+# Git and Version Control
+eamodio.gitlens                           # Git supercharged
+github.vscode-pull-request-github         # GitHub Pull Requests and Issues
+github.copilot                            # GitHub Copilot AI assistant
+github.copilot-chat                       # GitHub Copilot Chat
+
+# Code Quality and Formatting
+esbenp.prettier-vscode                     # Prettier code formatter
+ms-vscode.vscode-eslint                    # ESLint integration
+streetsidesoftware.code-spell-checker      # Spell checker
+davidanson.vscode-markdownlint             # Markdown linting
+
+# Productivity and Utilities
+ms-vscode.vscode-todo-highlight            # TODO highlight
+alefragnani.bookmarks                      # Bookmarks for code navigation
+ms-vsliveshare.vsliveshare                 # Live Share for collaboration
+formulahendry.auto-rename-tag              # Auto rename paired HTML/XML tags
+
+# Themes and Appearance
+pkief.material-icon-theme                  # Material Design Icons
+github.github-vscode-theme                 # GitHub Dark/Light themes
+dracula-theme.theme-dracula                # Dracula Official theme
+monokai.theme-monokai-pro-vscode          # Monokai Pro theme
+
+# Development Tools
+ms-vscode.vscode-chrome-debug              # Chrome debugging support
+ms-vscode.vscode-node-debug2               # Node.js debugging
+ms-dotnettools.csharp                      # C# language support
+ms-vscode.powershell                       # PowerShell language support
+
+# Database
+mtxr.sqltools                             # SQL database management
+mtxr.sqltools-driver-pg                   # PostgreSQL driver for SQLTools
+mtxr.sqltools-driver-mysql                # MySQL driver for SQLTools
+
+# API Development
+humao.rest-client                          # REST client for API testing
+42crunch.vscode-openapi                    # OpenAPI (Swagger) support
+
+# Documentation
+yzhang.markdown-all-in-one                 # Markdown support
+shd101wyy.markdown-preview-enhanced        # Enhanced markdown preview
+bierner.markdown-mermaid                   # Mermaid diagram support
+
+# Remote Development
+ms-vscode-remote.remote-ssh                # Remote SSH development
+ms-vscode-remote.remote-containers         # Development in containers
+ms-vscode-remote.remote-wsl                # WSL support
+
+# Vim Integration (optional, for vim users)
+vscodevim.vim                              # Vim emulation

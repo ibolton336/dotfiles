@@ -1,0 +1,49 @@
+# Pinned versions for development tools
+# Use with asdf: asdf install <tool> <version>
+# Format: tool_name version_number
+
+# Node.js LTS versions
+nodejs 20.11.1      # Current LTS
+nodejs 18.19.1      # Previous LTS (maintenance)
+
+# Python versions
+python 3.12.2       # Latest stable
+python 3.11.8       # Previous stable
+python 3.10.13      # Legacy support
+
+# Ruby versions
+ruby 3.3.0          # Latest stable
+ruby 3.2.3          # Previous stable
+
+# Go versions
+golang 1.22.1       # Latest stable
+
+# Java versions
+java adoptopenjdk-11.0.22+7    # Java 11 LTS
+java adoptopenjdk-17.0.10+7    # Java 17 LTS
+java adoptopenjdk-21.0.2+13    # Java 21 LTS
+
+# Terraform versions
+terraform 1.7.4     # Latest stable
+
+# Kubectl versions
+kubectl 1.29.2      # Latest stable
+
+# Helm versions
+helm 3.14.2         # Latest stable
+
+# Other tools
+rust 1.76.0         # Rust stable
+elixir 1.16.1       # Elixir latest
+erlang 26.2.2       # Erlang for Elixir
+
+# Note: Versions are as of April 2026
+# Update these regularly to stay current with latest stable releases
+# Check for updates with: asdf list all <tool>
+
+# Default global versions (set with asdf global)
+# These will be set automatically during the dev-tools phase:
+# nodejs: 20.11.1
+# python: 3.12.2
+# ruby: 3.3.0
+# golang: 1.22.1

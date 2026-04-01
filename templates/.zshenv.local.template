@@ -1,0 +1,25 @@
+# Local shell environment variables
+# Copy this file to ~/.zshenv.local and fill in your values
+# This file is sourced by zshenv and should NOT be committed to git
+
+# ---- API Keys and Tokens ----
+# export GITHUB_TOKEN="ghp_your_token_here"
+# export OPENAI_API_KEY="sk-your_key_here"
+# export ANTHROPIC_API_KEY="sk-ant-your_key_here"
+# export NPM_TOKEN="npm_your_token_here"
+
+# ---- Cloud Providers ----
+# export AWS_DEFAULT_REGION="us-east-1"
+# export AWS_PROFILE="default"
+
+# ---- Development Servers ----
+# export DATABASE_URL="postgresql://user:pass@localhost:5432/mydb"
+# export REDIS_URL="redis://localhost:6379"
+
+# ---- Custom PATH additions ----
+# export PATH="$HOME/.local/bin:$PATH"
+
+# ---- Proxy settings (if behind corporate proxy) ----
+# export HTTP_PROXY="http://proxy.example.com:8080"
+# export HTTPS_PROXY="http://proxy.example.com:8080"
+# export NO_PROXY="localhost,127.0.0.1,.example.com"

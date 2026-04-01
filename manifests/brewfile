@@ -1,0 +1,194 @@
+# Dotfiles Bootstrap Brewfile
+# Comprehensive package manifest for automated macOS development environment setup
+# Generated for: dotfiles migration enhancement
+# Last updated: 2026-04-01
+
+# ==============================================================================
+# TAPS - Third-party Homebrew repositories
+# ==============================================================================
+
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/services"
+
+# Development and productivity tools
+tap "1password/tap"
+tap "hashicorp/tap"
+
+# ==============================================================================
+# CORE SYSTEM UTILITIES
+# ==============================================================================
+
+# Essential command line tools
+brew "coreutils"        # GNU core utilities (gls, gcat, etc.)
+brew "findutils"        # GNU find, locate, updatedb, and xargs
+brew "gnu-sed"          # GNU sed (gsed)
+brew "grep"             # GNU grep
+brew "gawk"             # GNU awk
+brew "wget"             # Internet file retriever
+brew "curl"             # Command line tool for transferring data with URLs
+
+# File and text processing
+brew "jq"               # Command-line JSON processor (required for bootstrap state management)
+brew "yq"               # Command-line YAML processor
+brew "tree"             # Display directories as trees
+brew "fd"               # Simple, fast and user-friendly alternative to find
+brew "bat"              # Clone of cat with syntax highlighting and Git integration
+brew "exa"              # Modern replacement for ls
+
+# ==============================================================================
+# VERSION CONTROL AND GIT TOOLS
+# ==============================================================================
+
+brew "git"              # Distributed revision control system
+brew "git-delta"        # Syntax-highlighting pager for git and diff output
+brew "gh"               # GitHub command-line tool
+brew "git-lfs"          # Git extension for versioning large files
+brew "tig"              # Text interface for Git repositories
+
+# ==============================================================================
+# SEARCH AND CONTENT TOOLS (existing dotfiles dependencies)
+# ==============================================================================
+
+brew "ripgrep"          # Search tool (rg) - used in existing vim config and scripts
+brew "the_silver_searcher"  # Code search tool (ag) - existing completion support
+brew "fzf"              # Command-line fuzzy finder - referenced in zshrc
+
+# ==============================================================================
+# DEVELOPMENT TOOLS
+# ==============================================================================
+
+# Code editors and IDEs
+brew "vim"              # Vi 'workalike' with many additional features
+brew "neovim"           # Ambitious Vim-fork focused on extensibility and agility
+
+# Tags and documentation
+brew "universal-ctags"  # Maintained ctags implementation - used in existing git hooks
+
+# Shell and terminal
+brew "zsh"              # UNIX shell (command interpreter)
+brew "tmux"             # Terminal multiplexer - existing config present
+brew "screen"           # Terminal multiplexer with VT100/ANSI terminal emulation
+
+# ==============================================================================
+# VERSION MANAGERS AND RUNTIMES
+# ==============================================================================
+
+# Main version manager (existing dotfiles use asdf)
+brew "asdf"             # Extendable version manager - configured in existing zshrc
+
+# Language runtimes and tools
+brew "node"             # Platform built on V8 to build network applications
+brew "python@3.11"     # Python 3.11
+brew "python@3.12"     # Python 3.12
+brew "ruby"             # Powerful, clean, object-oriented scripting language
+brew "go"               # Go programming language
+
+# Package managers
+brew "yarn"             # JavaScript package manager
+
+# ==============================================================================
+# DATABASE AND DATA TOOLS
+# ==============================================================================
+
+brew "postgresql@14"    # Object-relational database system - psqlrc config exists
+brew "redis"            # Persistent key-value database
+brew "sqlite"           # Command-line interface for SQLite
+
+# ==============================================================================
+# CLOUD AND INFRASTRUCTURE TOOLS
+# ==============================================================================
+
+brew "awscli"           # Official Amazon AWS command-line interface
+brew "docker"           # Pack, ship and run any application as a lightweight container
+brew "kubernetes-cli"   # Kubernetes command-line interface
+brew "terraform"        # Tool to build, change, and version infrastructure
+
+# ==============================================================================
+# SECURITY AND SECRETS MANAGEMENT
+# ==============================================================================
+
+brew "1password-cli"    # 1Password command-line tool (for SSH signing integration)
+brew "gnupg"            # GNU Privacy Guard (GnuPG)
+brew "openssh"          # OpenBSD freely-licensed SSH connectivity tools
+
+# ==============================================================================
+# BUILD AND DEVELOPMENT SUPPORT
+# ==============================================================================
+
+brew "make"             # Utility for directing compilation
+brew "cmake"            # Cross-platform make
+brew "pkg-config"       # Manage compile and link flags for libraries
+brew "autoconf"         # Automatic configure script builder
+brew "automake"         # Tool for generating GNU Standards-compliant Makefiles
+
+# ==============================================================================
+# NETWORKING AND DEBUGGING
+# ==============================================================================
+
+brew "htop"             # Improved top (interactive process viewer)
+brew "nmap"             # Port scanning utility for large networks
+brew "httpie"           # User-friendly cURL replacement
+brew "mtr"              # 'traceroute' and 'ping' in a single tool
+
+# ==============================================================================
+# IMAGE AND MEDIA PROCESSING
+# ==============================================================================
+
+brew "imagemagick"      # Tools and libraries to manipulate images in many formats
+brew "ffmpeg"           # Play, record, convert, and stream audio and video
+
+# ==============================================================================
+# APPLICATIONS (GUI)
+# ==============================================================================
+
+# Development IDEs and editors
+cask "visual-studio-code"     # Microsoft's code editor
+cask "cursor"                 # AI-powered code editor
+
+# Terminals and system tools
+cask "iterm2"                 # Terminal emulator
+cask "rectangle"              # Window manager
+
+# Productivity applications
+cask "1password"              # Password manager
+cask "notion"                 # Note-taking and collaboration tool
+
+# Communication
+cask "slack"                  # Team communication and collaboration software
+cask "zoom"                   # Video communication and virtual meeting platform
+
+# Development utilities
+cask "docker"                 # Docker Desktop
+cask "postman"                # API development environment
+cask "insomnia"               # HTTP and GraphQL client
+
+# Browsers
+cask "google-chrome"          # Web browser
+cask "firefox"                # Web browser
+
+# ==============================================================================
+# FONTS
+# ==============================================================================
+
+# Developer fonts with ligatures
+cask "font-fira-code"         # Fira Code font family
+cask "font-jetbrains-mono"    # JetBrains Mono font family
+cask "font-source-code-pro"   # Source Code Pro font family
+
+# ==============================================================================
+# MAC APP STORE APPLICATIONS (to be installed via mas)
+# ==============================================================================
+
+# Note: These require 'mas' CLI tool and will be handled separately
+# - Xcode (497799835)
+# - TestFlight (899247664)
+# - The Unarchiver (425424353)
+
+# ==============================================================================
+# RCM (dotfiles management)
+# ==============================================================================
+
+brew "rcm"              # Management suite for dotfiles - core to existing setup

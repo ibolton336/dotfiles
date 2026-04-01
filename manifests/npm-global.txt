@@ -1,0 +1,39 @@
+# Global npm packages for development environment
+# Install with: npm install -g $(cat npm-global.txt | grep -v '^#' | xargs)
+
+# Package managers and tools
+yarn                    # Alternative package manager
+pnpm                    # Fast, disk space efficient package manager
+
+# TypeScript and build tools
+typescript              # TypeScript language compiler
+ts-node                 # TypeScript execution for Node.js
+@types/node             # Node.js type definitions
+
+# Development and testing
+nodemon                 # Automatically restart node application when file changes
+pm2                     # Production process manager for Node.js apps
+http-server             # Simple, zero-configuration command-line http server
+
+# Code quality and formatting
+eslint                  # JavaScript and TypeScript linter
+prettier                # Code formatter
+@typescript-eslint/parser  # TypeScript parser for ESLint
+@typescript-eslint/eslint-plugin  # TypeScript rules for ESLint
+
+# React development
+create-react-app        # Create React apps with no build configuration
+next                    # React framework for production
+
+# Utilities
+json                    # JSON pretty-printing and manipulation
+uuid-cli                # Generate UUIDs from command line
+rimraf                  # Deep deletion module (rm -rf for Windows compat)
+
+# Documentation
+jsdoc                   # API documentation generator
+typedoc                 # Documentation generator for TypeScript
+
+# Development servers
+live-server             # Development HTTP server with live reload
+lite-server             # Lightweight development HTTP server

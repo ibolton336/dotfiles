@@ -1,0 +1,32 @@
+# Mac App Store applications
+# Install with: mas install APP_ID
+# Find app IDs with: mas search "App Name"
+
+# Development Tools
+497799835   # Xcode - Apple's IDE for macOS/iOS development
+899247664   # TestFlight - Test iOS apps
+
+# Productivity
+425424353   # The Unarchiver - Archive extraction utility
+1295203466  # Microsoft Remote Desktop - Remote desktop client
+409183694   # Keynote - Apple's presentation software
+409201541   # Pages - Apple's word processor
+409203825   # Numbers - Apple's spreadsheet application
+
+# Utilities
+441258766   # Magnet - Window manager for macOS
+1274495053  # Microsoft To Do - Task management
+1006087419  # PolyCapture - Screen capture tool
+
+# Graphics and Design
+1351639930  # Gifski - Video to GIF converter
+1444383602  # GoodNotes 5 - Note-taking app
+
+# Communication
+1147396723  # WhatsApp - Messaging application
+
+# Note: Some popular development apps are installed via Homebrew casks instead:
+# - Visual Studio Code (via homebrew cask)
+# - Cursor IDE (via homebrew cask)
+# - Docker Desktop (via homebrew cask)
+# - Postman (via homebrew cask)

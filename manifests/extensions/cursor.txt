@@ -1,0 +1,58 @@
+# Cursor IDE Extensions
+# Note: Cursor is based on VS Code, so most VS Code extensions work
+# Install with: cursor --install-extension EXTENSION_ID
+
+# Core Language Support
+ms-python.python                           # Python language support
+ms-vscode.vscode-typescript-next           # TypeScript and JavaScript support
+bradlc.vscode-tailwindcss                  # Tailwind CSS IntelliSense
+rust-lang.rust-analyzer                    # Rust language support
+golang.go                                  # Go language support
+
+# AI and Copilot (Core Cursor features)
+github.copilot                            # GitHub Copilot (works with Cursor's AI)
+github.copilot-chat                       # GitHub Copilot Chat
+
+# Git and Version Control
+eamodio.gitlens                           # Git supercharged
+github.vscode-pull-request-github         # GitHub Pull Requests and Issues
+
+# Code Quality and Formatting
+esbenp.prettier-vscode                     # Prettier code formatter
+ms-vscode.vscode-eslint                    # ESLint integration
+streetsidesoftware.code-spell-checker      # Spell checker
+
+# Essential Development Tools
+ms-vscode.vscode-json                      # JSON language support
+redhat.vscode-yaml                         # YAML language support
+ms-vscode.vscode-docker                    # Docker support
+hashicorp.terraform                        # Terraform language support
+
+# Themes and Icons (Cursor-optimized)
+pkief.material-icon-theme                  # Material Design Icons
+github.github-vscode-theme                 # GitHub themes (work well with AI)
+dracula-theme.theme-dracula                # Dracula theme
+
+# Productivity Tools
+alefragnani.bookmarks                      # Code navigation bookmarks
+formulahendry.auto-rename-tag              # Auto rename HTML/XML tags
+ms-vscode.vscode-todo-highlight            # TODO highlighting
+
+# Documentation and Markdown
+yzhang.markdown-all-in-one                 # Comprehensive markdown support
+bierner.markdown-mermaid                   # Mermaid diagram support
+
+# API and Database
+humao.rest-client                          # REST API testing
+mtxr.sqltools                             # SQL database management
+
+# Remote Development
+ms-vscode-remote.remote-ssh                # Remote SSH development
+ms-vscode-remote.remote-containers         # Container development
+
+# Framework-Specific
+ms-vscode.vscode-node-debug2               # Node.js debugging
+ms-kubernetes-tools.vscode-kubernetes-tools # Kubernetes support
+
+# Note: Cursor has built-in AI features that may reduce the need for some extensions
+# Focus on extensions that complement Cursor's AI capabilities rather than duplicate them
