@@ -60,18 +60,21 @@ readonly PHASES=(
     "09-postflight"
 )
 
-# Phase descriptions
-declare -A PHASE_DESCRIPTIONS=(
-    ["01-preflight"]="System checks and preparation"
-    ["02-homebrew"]="Homebrew installation and packages"
-    ["03-system-tools"]="Essential system tools installation"
-    ["04-dotfiles-setup"]="Dotfiles cloning and symlink creation"
-    ["05-dev-tools"]="Development tools and version managers"
-    ["06-vim-setup"]="Vim configuration and plugins"
-    ["07-app-installs"]="Applications and extensions"
-    ["08-shell-setup"]="Shell configuration and setup"
-    ["09-postflight"]="Final verification and cleanup"
-)
+# Phase description lookup (Bash 3.2 compatible — no associative arrays)
+get_phase_description() {
+    case "$1" in
+        01-preflight)    echo "System checks and preparation" ;;
+        02-homebrew)     echo "Homebrew installation and packages" ;;
+        03-system-tools) echo "Essential system tools installation" ;;
+        04-dotfiles-setup) echo "Dotfiles cloning and symlink creation" ;;
+        05-dev-tools)    echo "Development tools and version managers" ;;
+        06-vim-setup)    echo "Vim configuration and plugins" ;;
+        07-app-installs) echo "Applications and extensions" ;;
+        08-shell-setup)  echo "Shell configuration and setup" ;;
+        09-postflight)   echo "Final verification and cleanup" ;;
+        *)               echo "Unknown phase" ;;
+    esac
+}
 
 # Show usage information
 show_usage() {
@@ -129,7 +132,7 @@ EOF
 # Format phases list for display
 list_phases_formatted() {
     for phase in "${PHASES[@]}"; do
-        printf "    %-15s %s\n" "$phase" "${PHASE_DESCRIPTIONS[$phase]}"
+        printf "    %-15s %s\n" "$phase" "$(get_phase_description "$phase")"
     done
 }
 
@@ -301,7 +304,7 @@ execute_phase() {
         chmod +x "$phase_script"
     fi
 
-    log_header "Phase: $phase - ${PHASE_DESCRIPTIONS[$phase]}"
+    log_header "Phase: $phase - $(get_phase_description "$phase")"
 
     # Set current phase in state
     set_current_phase "$phase"
@@ -371,7 +374,7 @@ show_bootstrap_summary() {
     if [[ ${#phases_to_run[@]} -gt 0 ]]; then
         log_info "Phases to run:"
         for phase in "${phases_to_run[@]}"; do
-            log_info "  $phase - ${PHASE_DESCRIPTIONS[$phase]}"
+            log_info "  $phase - $(get_phase_description "$phase")"
         done
     else
         log_info "No phases to run"
@@ -441,9 +444,11 @@ main() {
         fi
     fi
 
-    # Get phases to run
-    local phases_to_run
-    readarray -t phases_to_run < <(get_phases_to_run)
+    # Get phases to run (Bash 3.2 compatible — no readarray)
+    local phases_to_run=()
+    while IFS= read -r _phase; do
+        phases_to_run+=("$_phase")
+    done < <(get_phases_to_run)
 
     # Show summary
     show_bootstrap_summary "${phases_to_run[@]}"
@@ -522,7 +527,7 @@ main() {
     else
         log_warning "Some phases failed:"
         for phase in "${failed_phases[@]}"; do
-            log_warning "  $phase - ${PHASE_DESCRIPTIONS[$phase]}"
+            log_warning "  $phase - $(get_phase_description "$phase")"
         done
 
         log_info "You can resume the bootstrap with: $(basename "$0") --resume"
