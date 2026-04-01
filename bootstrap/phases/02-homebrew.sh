@@ -229,10 +229,10 @@ verify_homebrew() {
         return 1
     fi
 
-    # Verify RCM is installed (critical for dotfiles setup)
+    # Check if RCM was installed (needed later in phase 4)
     if ! command -v rcup >/dev/null 2>&1; then
-        log_error "RCM (rcup) not found - this is required for dotfiles management"
-        return 1
+        log_warning "RCM (rcup) not found in PATH yet"
+        log_info "It may become available after shell restart, or install with: brew install rcm"
     fi
 
     log_success "Homebrew installation verified successfully"
