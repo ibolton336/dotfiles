@@ -27,3 +27,6 @@ MSG
 fi
 
 unset _old_path
+
+# uv
+export PATH="/Users/ibolton/.local/bin:$PATH"
