@@ -19,20 +19,20 @@ else
 fi
 
 # Global variables for error handling
-readonly STATE_DIR="${HOME}/.cache/dotfiles-bootstrap"
-readonly STATE_FILE="${STATE_DIR}/bootstrap-state.json"
-readonly BACKUP_DIR="${STATE_DIR}/backups"
-readonly LOCK_FILE="${STATE_DIR}/bootstrap.lock"
+STATE_DIR="${HOME}/.cache/dotfiles-bootstrap"
+STATE_FILE="${STATE_DIR}/bootstrap-state.json"
+BACKUP_DIR="${STATE_DIR}/backups"
+LOCK_FILE="${STATE_DIR}/bootstrap.lock"
 
 # Exit codes
-readonly EXIT_SUCCESS=0
-readonly EXIT_GENERAL_ERROR=1
-readonly EXIT_COMMAND_NOT_FOUND=127
-readonly EXIT_USER_ABORT=130
-readonly EXIT_DEPENDENCY_ERROR=2
-readonly EXIT_PERMISSION_ERROR=3
-readonly EXIT_NETWORK_ERROR=4
-readonly EXIT_DISK_SPACE_ERROR=5
+EXIT_SUCCESS=0
+EXIT_GENERAL_ERROR=1
+EXIT_COMMAND_NOT_FOUND=127
+EXIT_USER_ABORT=130
+EXIT_DEPENDENCY_ERROR=2
+EXIT_PERMISSION_ERROR=3
+EXIT_NETWORK_ERROR=4
+EXIT_DISK_SPACE_ERROR=5
 
 # Initialize error handling system
 init_error_handling() {

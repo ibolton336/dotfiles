@@ -24,15 +24,15 @@
 set -euo pipefail
 
 # Script metadata
-readonly SCRIPT_VERSION="1.0.0"
-readonly SCRIPT_NAME="Dotfiles Bootstrap"
-readonly MIN_MACOS_VERSION="11.0"
+SCRIPT_VERSION="1.0.0"
+SCRIPT_NAME="Dotfiles Bootstrap"
+MIN_MACOS_VERSION="11.0"
 
 # Determine script directory
-readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readonly DOTFILES_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-readonly LIB_DIR="$SCRIPT_DIR/lib"
-readonly PHASES_DIR="$SCRIPT_DIR/phases"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+LIB_DIR="$SCRIPT_DIR/lib"
+PHASES_DIR="$SCRIPT_DIR/phases"
 
 # Source utility libraries
 source "$LIB_DIR/logging.sh"
@@ -48,7 +48,7 @@ SPECIFIC_PHASE=""
 LOG_FILE=""
 
 # Phase definitions (order matters!)
-readonly PHASES=(
+PHASES=(
     "01-preflight"
     "02-homebrew"
     "03-system-tools"
